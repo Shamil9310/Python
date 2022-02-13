@@ -14,4 +14,6 @@
 проверять результат.
 """
 
-mac = "AAAA:BBBB:CCCC"
+mac = "AAAA:BBBB:CCCC" 
+print("mac")
+

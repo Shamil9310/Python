@@ -15,5 +15,8 @@
 """
 
 mac = "AAAA:BBBB:CCCC" 
-print("mac")
+result=mac.replace("AAAA:BBBB:CCCC", "AAAA.BBBB.CCCC" )
+print(result)
+
+
 

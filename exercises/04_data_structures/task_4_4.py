@@ -23,4 +23,29 @@
 проверять результат.
 """
 
+"""
 vlans = [10, 20, 30, 1, 2, 100, 10, 30, 3, 4, 10]
+cmd=vlans.split
+print(cmd)
+"""
+
+
+Interface_DATA = """
+interface Gi0/1.2 
+ description ===DATA_SEC===
+ encapsulation dot1Q 200
+ ip vrf forwarding VRF_DATA_SEC
+ ip address {}
+ ip helper-address 172.21.114.100
+ ip helper-address 172.22.114.100
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ ip flow ingress
+ ip flow egress
+ ip virtual-reassembly 
+"""
+print(Interface_DATA.format("10.5.4.6 255.255.255.0"))
+
+
+

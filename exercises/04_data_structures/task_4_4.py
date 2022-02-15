@@ -36,8 +36,8 @@ interface Gi0/1.2
  encapsulation dot1Q 200
  ip vrf forwarding VRF_DATA_SEC
  ip address {}
- ip helper-address 172.21.114.100
- ip helper-address 172.22.114.100
+ ip helper-address {}
+ ip helper-address {}
  no ip redirects
  no ip unreachables
  no ip proxy-arp
@@ -45,7 +45,7 @@ interface Gi0/1.2
  ip flow egress
  ip virtual-reassembly 
 """
-print(Interface_DATA.format("10.5.4.6 255.255.255.0"))
+print(Interface_DATA.format("10.5.4.6 255.255.255.0", "172.21.114.100", "172.16.22.114.100" ))
 
 
 
